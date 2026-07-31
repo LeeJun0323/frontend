@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* box : 횐색배경 */
+      /* 왼쪽화살표 : 왼쪽 */
+      /* 오른쪽화살표 : 오른쪽 */
+      /* p 영역은 원래대로 */
+      .box {
+        background-color: white;
+      }
+      .box img:first-child {
+        float: left;
+      }
+      .box img:nth-child(2) {
+        float: right;
+      }
+      p {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="../data/left-arrow.png" alt="" />
+      <img src="../data/right-arrow.png" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, debitis
+        exercitationem? Nostrum veniam quaerat impedit expedita commodi sapiente
+        voluptatem, natus autem, necessitatibus rem fugit deserunt, eaque
+        doloribus est nesciunt quibusdam!
+      </p>
+    </div>
+  </body>
+</html>

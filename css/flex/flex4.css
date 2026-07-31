@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-boxs;
+}
+
+body {
+  background: #333338;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.main-content > .panel > p,
+.main-content > .panel > h3 {
+  margin: 15px 0;
+}
+
+.main-content,
+.sidebar {
+  margin: 10px;
+  background: white;
+  padding: 6px;
+}
+
+.container {
+  display: flex;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.sidebar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+}
