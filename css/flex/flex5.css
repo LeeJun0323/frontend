@@ -28,3 +28,31 @@
   order: 3;
   background-color: #34495e;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .container main {
+    order: 1;
+  }
+  .container .left {
+    order: 2;
+  }
+  .container .right {
+    order: 3;
+  }
+  .container .sidebar {
+    width: 50%;
+    padding: 10px;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container .sidebar {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+  }
+}
