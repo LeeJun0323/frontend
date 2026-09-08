@@ -1,0 +1,15 @@
+시맨틱 태그 : 브라우저와 검색엔진에게 이 부분이 어떤 역할인지 알려주는 태그
+
+<div id="header> ~~~~</div>
+<div id="menu> ~~~~</div>
+<div id="content> ~~~~</div>
+
+<header><header>
+<nav><nav>
+<main><main>
+<footer><footer>
+
+thead, tbody,tfoot
+=> table head / table body / table footer
+
+타입스크립트 : 자바스크립트에 타입 지정
