@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
+import Switch from "./event/Switch";
 import "./index.css";
-import Counter from "./state/Counter";
 
-createRoot(document.getElementById("root")!).render(<Counter />);
+createRoot(document.getElementById("root")!).render(<Switch />);
