@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text-danger {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="user_id">아이디</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="tel">전화번호</label>
+        <input type="tel" name="tel" id="tel" />
+      </div>
+      <button type="submit">전송</button>
+    </form>
+    <script>
+      // submit 이벤트
+      document.querySelector("form").addEventListener("submit", (e) => {
+        // e.preventDefault();
+
+        const form = e.target;
+
+        const regExp1 = /^\d{3}-\d{4}-\d{4}$/;
+
+        if (form.user_id.value === "") {
+          alert("아이디 입력");
+          form.user_id.focus();
+          return;
+        } else if (form.password.value === "") {
+          alert("비밀번호 입력");
+          form.password.focus();
+          return;
+        } else if (!regExp1.test(form.tel.value)) {
+          // 전화번호 패턴 010-4513-1234
+          alert("전화번호 확인해주세요.");
+          form.tel.focus();
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>
