@@ -92,3 +92,5 @@ useParams
 
 서버에서 데이터 가져오기(json)
 
+구글 아이콘
+font-awsome

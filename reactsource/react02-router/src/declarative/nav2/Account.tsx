@@ -11,7 +11,7 @@ const Account = () => {
         <NavLink to="register">
           <span>Register</span>
         </NavLink>
-        <NavLink to="profile">
+        <NavLink to={`profile/${id}`}>
           <span>Profile</span>
         </NavLink>
       </nav>

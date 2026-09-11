@@ -6,11 +6,11 @@
 
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import About from "./about";
-import Contact from "./contact";
+import About from "./About";
+import Contact from "./Contact";
 import Login from "./Login";
 import Register from "./Register";
-import Account from "./account";
+import Account from "./Account";
 import Profile from "./Profile";
 
 const Navbar = () => {
