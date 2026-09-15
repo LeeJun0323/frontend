@@ -32,18 +32,15 @@ const MainTask = () => {
     ]);
   };
   // 여행계획 수정
-  const handleUpdateTask = (task: TaskProps) => {};
+  // text 내용 수정, done 완료 여부 수정
+  const handleUpdateTask = (task: TaskProps) => {
+    tasks.map((t) => (t.id === task.id ? { ...t, ...task } : t));
+  };
   // 여행계획 제거
   const handleRemoveTask = (taskId: number) => {
     // taskId : id
     // tasks에서 taskId와 일치하지 않는 task 추출해서 새로운 배열로 생성
     setTasks(tasks.filter((task) => task.id !== taskId));
-  };
-  // 여행계획 완료
-  const handDoneTask = (taskId: number) => {
-    // taskId와 일치한 task를 찾아서 그 task done 값을 반대로 설정
-    const task = tasks.find((t) => t.id === taskId);
-    
   };
 
   return (
@@ -53,9 +50,8 @@ const MainTask = () => {
         <AddTask handleAddTask={handleAddTask} />
         <ListTask
           tasks={tasks}
-          onEditTask={handleUpdateTask}
+          handleUpdateTask={handleUpdateTask}
           onRemoveTask={handleRemoveTask}
-          onToggleTask={handDoneTask}
         />
       </div>
     </div>
