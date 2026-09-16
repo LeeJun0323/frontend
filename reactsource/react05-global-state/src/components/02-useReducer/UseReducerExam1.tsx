@@ -32,7 +32,7 @@ const UseReducerExam1 = () => {
   return (
     <div className="m-3">
       <div className="m-3">
-        <h2 className="text-2xl">useState 확인하기</h2>
+        <h2 className="text-2xl">useReduce 확인하기</h2>
         <div>
           <label htmlFor="name">이름</label>
           <input
