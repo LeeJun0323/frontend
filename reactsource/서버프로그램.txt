@@ -1,0 +1,7 @@
+서버 프로그램 작성
+파이썬 - fastapi, flask, django
+자바 - spring
+
+CORS policy : 동일 출처 정책 => 브라우저가 차단
+
+차단해제 : 서버프로그램에서 CORS 설정

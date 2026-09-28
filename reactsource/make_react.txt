@@ -116,3 +116,17 @@ useContext : 상태를 여러 컴포넌트에 어떻게 공유할지 관리
 3. 상태를 공유할 자식 컴포넌트를 Provider로 감싸기
 4. 자식 컴포넌트에서 공유된 값 사용
 
+redux
+- useReducer, useContext 대체
+리덕스 툴킷(리덕스 + 리덕스 복잡한 설정 기능 보완)
+
+npm create vite@latest
+npm install tailwindcss @tailwindcss/vite
+npm install react-router-dom react-redux @reduxjs/toolkit
+npm install react-icons
+
+리덕스 툴킷
+화면에서 이벤트 발생 => dispatch() => 리듀서 호출 => 리듀서 액션 분석 후 상태 변경 => 새로운 상태 반환 => 화면렌더링
+ㄴ immer : 알아서 불변성을 지켜줌
+    ㄴ 원본 수정 가능
+        ㄴ push() 가능
