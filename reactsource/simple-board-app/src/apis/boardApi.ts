@@ -1,10 +1,12 @@
 import axios from "axios";
 import type { BoardUpSert } from "../types/board";
 
+// fastapi router랑 통신
+
 const url = "http://localhost:8000/boards";
 
-export const getBoards = async () => {
-  const response = await axios.get(`${url}`);
+export const getBoards = async (page: number, size: number) => {
+  const response = await axios.get(`${url}`, { params: { page, size } });
   return response.data;
 };
 

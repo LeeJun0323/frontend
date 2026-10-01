@@ -7,8 +7,10 @@ import type { TaskAdd, TaskProps } from "../components/MainTask";
 // 127.0.0.1 == localhost
 const url = "http://127.0.0.1:8000/tasks";
 
-export const getTasks = async () => {
-  const response = await axios.get(`${url}`);
+export const getTasks = async (page: number, size: number) => {
+  const response = await axios.get(`${url}`, {
+    params: { page: page, size: size },
+  });
   return response.data;
 };
 

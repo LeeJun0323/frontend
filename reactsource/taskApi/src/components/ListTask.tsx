@@ -7,6 +7,7 @@ type TaskListProps = {
   handleUpdateTask: (task: TaskProps) => void;
   onRemoveTask: (taskid: number) => void;
 };
+
 // Omit<타입명, "제거 속성">
 type TaskItemProps = Omit<TaskItemProps, "tasks"> & {
   task: TaskItemProps;
@@ -51,7 +52,9 @@ const ItemTask = ({
             onChange={(e) => setText(e.target.value)}
           />
         ) : (
-          <span className="text-gray-800">{text}</span>
+          <span className="text-gray-800">
+            {task.id}-{text}
+          </span>
         )}
       </div>
       <div className="flex items-center gap-2">
@@ -91,6 +94,7 @@ const ListTask = ({ tasks, handleUpdateTask, onRemoveTask }) => {
           task={task}
           handleUpdateTask={handleUpdateTask}
           onRemoveTask={onRemoveTask}
+          key={task.id}
         />
       ))}
     </div>
